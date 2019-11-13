@@ -29,8 +29,8 @@ export async function getPack(opts: {
         url: pathJoin(
             _endpoint,
             'languages',
-            `${code}${defaultCode ? ',' + defaultCode : ''}`,
-            version ? `?version=${version}` : ''
+            `${code}${defaultCode ? ',' + defaultCode : ''}` +
+            (version ? `?version=${version}` : '')
         ),
     }) as { status: string, error?: string, data: { [code: string]: LanguagePack } };
     return res.data;

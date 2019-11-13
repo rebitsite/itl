@@ -28,7 +28,8 @@ function getPack(opts) {
         let { code, defaultCode, version } = opts;
         let res = yield request_1.createRequest({
             method: "GET",
-            url: pathJoin(_endpoint, 'languages', `${code}${defaultCode ? ',' + defaultCode : ''}`, version ? `?version=${version}` : ''),
+            url: pathJoin(_endpoint, 'languages', `${code}${defaultCode ? ',' + defaultCode : ''}` +
+                (version ? `?version=${version}` : '')),
         });
         return res.data;
     });

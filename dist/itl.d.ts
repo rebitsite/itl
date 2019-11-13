@@ -1,4 +1,4 @@
-declare type GoGlobalProps = {
+declare type Props = {
     endPoint: string;
     defaultLanguage: string;
     selectedLanuage?: string;
@@ -14,7 +14,7 @@ export default class itl {
     private _testMode;
     private _checked;
     _unlisted: string[];
-    constructor(props: GoGlobalProps);
+    constructor(props: Props);
     getCode(): string;
     t: (phrase: string, opts?: {
         data?: {

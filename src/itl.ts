@@ -1,7 +1,7 @@
 import configStorage from "./config";
 import { reportMissingPhrase, getPack, getSupportedLanguages, setEndpointURL } from "./utils";
 
-type GoGlobalProps = {
+type Props = {
     endPoint: string,
     defaultLanguage: string,
     selectedLanuage?: string,
@@ -22,7 +22,7 @@ export default class itl {
     private _checked = false;
     _unlisted: string[] = [];
 
-    constructor(props: GoGlobalProps) {
+    constructor(props: Props) {
         this._dCode = props.defaultLanguage;
         this._testMode = props.testMode || false;
         props.selectedLanuage && (this._sCode = props.selectedLanuage);
