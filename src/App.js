@@ -1,15 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import i8 from './i8.config';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>{i8.t("Hello __name__!", { data: { name: "John" } })}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
