@@ -16,6 +16,13 @@ export declare class GoGlobal {
     _unlisted: string[];
     constructor(props: GoGlobalProps);
     getCode(): string;
+    t: (phrase: string, opts?: {
+        data?: {
+            [prop: string]: any;
+        } | undefined;
+        case?: "upper" | "lower" | "capital" | "title" | undefined;
+        format?: string | undefined;
+    } | undefined) => string;
     initiate(): Promise<void>;
     loadPack(): Promise<void>;
     private findInDefault;

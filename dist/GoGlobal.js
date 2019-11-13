@@ -25,6 +25,7 @@ class GoGlobal {
         this._testMode = false;
         this._checked = false;
         this._unlisted = [];
+        this.t = this.text;
         this.findInDefault = (lowerCaseValue) => {
             return this._d.findIndex(item => {
                 return item.toLowerCase() === lowerCaseValue;

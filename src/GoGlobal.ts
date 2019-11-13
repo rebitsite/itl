@@ -40,6 +40,8 @@ export class GoGlobal {
         return this._sCode;
     }
 
+    t = this.text;
+
     async initiate() {
         let _s = configStorage.get(`lang/selected`);
         let _d = configStorage.get(`lang/default`);
