@@ -21,9 +21,9 @@ yarn add itl
 Best to leave it in the root or `src` folder of your app
 
 ```js
-// ./itl.config.js
+// ./i8.config.js
 import GoGlobal from "itl";
-const itl = new GoGlobal({
+const i8 = new GoGlobal({
     endPoint: "(your itl-server enpoint)",
     defaultLanguage: "en", // the language is used in the app
     selectedLanguage: "fr", // optional, if a different language is set while using the app, it will ignore this option
@@ -33,33 +33,35 @@ const itl = new GoGlobal({
 // Then from the browser console, run printNotTranslatedList
 window.printNotTranslatedList = itl.getUnlisted
 
-export default itl;
+export default i8;
 ```
 
 ## 2. How to use it?
 
-From here, everytime you need to translate a phrase, you will load `itl` from the `itl.config.js` file created above.
+From here, everytime you need to translate a phrase, you will load `i8` from the `i8.config.js` file created above.
 
 ### 2.1. Syntax
 ```js
-itl.text(
+i8.text(
     phrase: string, 
     options?: { 
         data?: { [variable]: string: string | number }, 
         case?: "upper" | "lower" | "capital" | "title" // "capital" by default
     }
 )
+
+// or use a shorter form "i8.t"
 ```
 
 
 ### 2.2. Examples
 
 ```js
-import itl from "./itl.config.js";
+import i8 from "./i8.config.js";
 
 // Set a reference language, load from server if it doesn't find in the cache storage
-await itl.setLanguage("fr");
+await i8.setLanguage("fr");
 
-itl.text("Hello"); // => Salut
-itl.text("Hello, __name__!", { data: { name: "Tiffany" } }); // => Bonjour, Tiffany!
+i8.text("Hello"); // => Salut
+i8.text("Hello, __name__!", { data: { name: "Tiffany" } }); // => Bonjour, Tiffany!
 ```
