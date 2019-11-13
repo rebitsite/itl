@@ -1,6 +1,6 @@
 {
-  "name": "i8",
-  "version": "1.0.0",
+  "name": "itl",
+  "version": "0.0.1",
   "description": "A simple font-end translation library",
   "main": "dist/index.js",
   "scripts": {
