@@ -18,7 +18,7 @@ exports.setEndpointURL = setEndpointURL;
 function reportMissingPhrase(opts) {
     request_1.createRequest({
         method: "POST",
-        url: pathJoin(_endpoint, 'languages', 'report'),
+        url: pathJoin(_endpoint, 'report'),
         data: opts
     });
 }
@@ -28,7 +28,7 @@ function getPack(opts) {
         let { code, defaultCode, version } = opts;
         let res = yield request_1.createRequest({
             method: "GET",
-            url: pathJoin(_endpoint, 'languages', `${code}${defaultCode ? ',' + defaultCode : ''}` +
+            url: pathJoin(_endpoint, `${code}${defaultCode ? ',' + defaultCode : ''}` +
                 (version ? `?version=${version}` : '')),
         });
         return res.data;
@@ -38,7 +38,7 @@ exports.getPack = getPack;
 function getSupportedLanguages() {
     return request_1.createRequest({
         method: "GET",
-        url: pathJoin(_endpoint, 'languages', 'list')
+        url: pathJoin(_endpoint, 'list')
     });
 }
 exports.getSupportedLanguages = getSupportedLanguages;

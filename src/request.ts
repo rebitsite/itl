@@ -11,7 +11,7 @@ export function createRequest(args: Request) {
     args.data && (opts.data = JSON.stringify(args.data));
 
     return new Promise((resolve: any, reject:any) => {
-        fetch(opts.url, opts)
+        fetch(args.url, opts)
         .then(rs => rs.json())
         .then(resolve)
         .catch(reject);

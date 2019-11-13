@@ -1,6 +1,6 @@
 {
   "name": "itl",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "description": "A simple font-end translation library",
   "main": "dist/index.js",
   "scripts": {

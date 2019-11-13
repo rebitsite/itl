@@ -13,7 +13,7 @@ export function setEndpointURL(url: string) {
 export function reportMissingPhrase(opts: { code: string, phrase: string }) {
     createRequest({
         method: "POST",
-        url: pathJoin(_endpoint, 'languages', 'report'),
+        url: pathJoin(_endpoint, 'report'),
         data: opts
     })
 }
@@ -28,7 +28,6 @@ export async function getPack(opts: {
         method: "GET",
         url: pathJoin(
             _endpoint,
-            'languages',
             `${code}${defaultCode ? ',' + defaultCode : ''}` +
             (version ? `?version=${version}` : '')
         ),
@@ -39,7 +38,7 @@ export async function getPack(opts: {
 export function getSupportedLanguages() {
     return createRequest({
         method: "GET",
-        url: pathJoin(_endpoint, 'languages', 'list')
+        url: pathJoin(_endpoint, 'list')
     })
 }
 
