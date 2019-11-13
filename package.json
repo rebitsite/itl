@@ -1,0 +1,28 @@
+{
+  "name": "i8",
+  "version": "1.0.0",
+  "description": "A simple font-end translation library",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieunc229/i8.git"
+  },
+  "keywords": [
+    "translation",
+    "front-end",
+    "internationalization"
+  ],
+  "author": "Hieu C. Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hieunc229/i8/issues"
+  },
+  "homepage": "https://github.com/hieunc229/i8#readme",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
