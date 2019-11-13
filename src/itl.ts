@@ -8,7 +8,7 @@ type GoGlobalProps = {
     testMode?: boolean
 }
 
-export class GoGlobal {
+export default class itl {
 
     private _s: string[] = [];
     private _d: string[] = [];

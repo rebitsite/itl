@@ -1,4 +1,4 @@
-import { GoGlobal } from "./GoGlobal";
+import itl from "./itl";
 
 
-export default GoGlobal;
+export default itl;
