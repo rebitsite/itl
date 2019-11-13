@@ -1,4 +1,4 @@
-# itl - A simple JavasSript library for phrases translation
+# itl - A simple JavaSript library for phrases translation
 
 Note that it works with [itl-server](https://github.com/hieunc229/itl-server)
 
@@ -22,8 +22,8 @@ Best to leave it in the root or `src` folder of your app
 
 ```js
 // ./i8.config.js
-import GoGlobal from "itl";
-const i8 = new GoGlobal({
+import itl from "itl";
+const i8 = new itl({
     endPoint: "(your itl-server enpoint)",
     defaultLanguage: "en", // the language is used in the app
     selectedLanguage: "fr", // optional, if a different language is set while using the app, it will ignore this option
