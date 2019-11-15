@@ -1,6 +1,9 @@
 # itl - A simple JavaSript library for phrases translation
 
-Note that it works with [itl-server](https://github.com/hieunc229/itl-server)
+`itl` is client library for [itl-server](https://github.com/hieunc229/itl), a DIY translation service. It's free and simple to setup. For more details, read [Translate the entire app to 103 languages: A DIY tutorial](http://about.saltar.co/blog/translate-entire-app-with-spreadsheet-diy-tutorial)
+
+An example is available through [`example` branch](https://github.com/hieunc229/itl/tree/example)
+
 
 ## 1. Installation
 
